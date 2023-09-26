@@ -2,7 +2,7 @@
 ![Logo](https://github.com/swarupt29/Fees-Management/assets/118194258/3514b1cf-3b84-4f2c-8e55-ea2c9aefbf8e)
 
 
-# <span style="color:blue">Fees Management System</span>
+# Fees Management System
 
 The Fees Management System is a Java application created as part of the Coders Cave virtual internship. It simplifies fee record management for educational institutions and organizations.
 
@@ -16,7 +16,6 @@ The Fees Management System is a Java application created as part of the Coders C
 ## Features
 - View, add, update, and delete fee records.
 - User-friendly graphical interface.
-- Java Development Kit (JDK) and Java Runtime Environment (JRE) required.
 
 ## Installation
 
@@ -64,6 +63,58 @@ Follow these steps to set up and run the Random Password Generator project using
 
 8. **Use the Random Password Generator**:
    - The application window will open, allowing you to customize and generate random passwords.
+
+## Database
+In the source code, locate the following line:
+
+```
+connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Fees", "root", "root");
+```
+
+Modify the connection URL, username and password as needed.
+
+- MySQL
+  
+    ```
+    connection = DriverManager.getConnection("jdbc:mysql://your-database-host:your-port/your-database-name", "your-username", "your-password");
+    ```
+
+**Syntax for other Databases**
+  - PostgreSQL
+    ```
+    connection = DriverManager.getConnection("jdbc:postgresql://your-database-host:your-port/your-database-name", "your-username", "your-password");
+    ```
+
+- SQLite
+    ```
+    connection = DriverManager.getConnection("jdbc:sqlite:/path/to/your/database/file.db");
+    ```
+
+**Table Creation Query for this project**
+```
+CREATE TABLE YourTableName (
+    Name VARCHAR(255),
+    Class VARCHAR(255),
+    Contact VARCHAR(255),
+    Amount DECIMAL(10, 2)
+);
+```
+**If you dont wan't to add data one by one manually then paste the following command**
+
+```
+INSERT INTO YourTableName (Name, Class, Contact, Amount)
+VALUES
+    ('Name1', 'Class1', 'Contact1', 4923.45),
+    ('Name2', 'Class2', 'Contact2', 4987.60),
+    ('Name3', 'Class3', 'Contact3', 4950.75),
+    ('Name4', 'Class4', 'Contact4', 4912.30),
+    ('Name5', 'Class5', 'Contact5', 4978.25),
+    ('Name6', 'Class6', 'Contact6', 4945.80),
+    ('Name7', 'Class7', 'Contact7', 4930.50),
+    ('Name8', 'Class8', 'Contact8', 4965.90),
+    ('Name9', 'Class9', 'Contact9', 4905.10),
+    ('Name10', 'Class10', 'Contact10', 4999.99);
+```
 
 ## Usage
 1. Launch the application.
