@@ -58,7 +58,7 @@ Follow these steps to set up and run the Random Password Generator project using
    - Ensure you have the Java Development Kit (JDK) and Java Runtime Environment (JRE) properly configured in your Eclipse workspace.
 
 7. **Run the Application**:
-   - Locate the `RandomPasswordGeneratorGui.java` file in the project.
+   - Locate the `FeesManagementSystem.java` file in the project.
    - Right-click on it and select `Run As > Java Application`.
 
 8. **Use the Random Password Generator**:
